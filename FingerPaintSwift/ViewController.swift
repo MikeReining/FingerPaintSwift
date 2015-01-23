@@ -41,20 +41,22 @@ class ViewController: UIViewController {
         // Calculate new position with every pan handle
         let currentLocation = recognizer.view!.center
         let newLocation = recognizer.locationInView(self.view)
-        println("\(newLocation)")
-//        drawingModel.pointArray.append(currentLocation)
         drawingModel.pointArray.append(newLocation)
-        // Distance and path travelled (not used for this exercise)
-        let distanceX = (currentLocation.x + newLocation.x) / 2
-        let distanceY = (currentLocation.y + newLocation.y) / 2
-        let pathTravelled = sqrt((distanceX * distanceX + distanceY * distanceY ))
         self.view.setNeedsDisplay()
+        
+        // Customize line width based on
+        let velocity = recognizer.velocityInView(self.view)
+        let magnitude = sqrt((velocity.x * velocity.x) + (velocity.y * velocity.y))
+        let lineWidthMultiplier = magnitude / 50
+        println("\(lineWidthMultiplier)")
+        drawingView.myBezierPath.lineWidth = lineWidthMultiplier
+        
         
         if recognizer.state == .Ended {
             println("Pan has ended")
             println("\(drawingModel.pointArray.count)")
             println("\(drawingView.model!.pointArray.count)")
-            drawingModel.pointArray.removeAll(keepCapacity: false)
+//          drawingModel.pointArray.removeAll(keepCapacity: false)
 
         }
         
