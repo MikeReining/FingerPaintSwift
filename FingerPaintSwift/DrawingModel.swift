@@ -8,6 +8,7 @@
 
 import UIKit
 
-struct DrawingModel {
-    var pointArray: [CGPoint]
+class DrawingModel {
+    var pointArray = [CGPoint]()
 }
+

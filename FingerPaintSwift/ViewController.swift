@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var drawingView: DrawingView!
-    var drawingModel = DrawingModel(pointArray: [CGPoint]())
+    var drawingModel = DrawingModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        drawingView.model = drawingModel
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -38,19 +40,25 @@ class ViewController: UIViewController {
         
         // Calculate new position with every pan handle
         let currentLocation = recognizer.view!.center
-        let newLocation = recognizer.translationInView(self.view)
+        let newLocation = recognizer.locationInView(self.view)
         println("\(newLocation)")
-        drawingModel.pointArray.append(currentLocation)
+//        drawingModel.pointArray.append(currentLocation)
         drawingModel.pointArray.append(newLocation)
         // Distance and path travelled (not used for this exercise)
         let distanceX = (currentLocation.x + newLocation.x) / 2
         let distanceY = (currentLocation.y + newLocation.y) / 2
         let pathTravelled = sqrt((distanceX * distanceX + distanceY * distanceY ))
+        self.view.setNeedsDisplay()
         
         if recognizer.state == .Ended {
             println("Pan has ended")
             println("\(drawingModel.pointArray.count)")
+            println("\(drawingView.model!.pointArray.count)")
+            drawingModel.pointArray.removeAll(keepCapacity: false)
+
         }
+        
+        
         
 
     }
