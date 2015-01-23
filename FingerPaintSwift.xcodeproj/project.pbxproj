@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27B9D2611A72A109005BC633 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B9D2601A72A109005BC633 /* QuartzCore.framework */; };
 		27B9D2631A72D55B005BC633 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9D2621A72D55B005BC633 /* DrawingView.swift */; };
+		27B9D2651A72E67A005BC633 /* DrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9D2641A72E67A005BC633 /* DrawingModel.swift */; };
 		27EE83911A729A7100415D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE83901A729A7100415D9B /* AppDelegate.swift */; };
 		27EE83931A729A7100415D9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE83921A729A7100415D9B /* ViewController.swift */; };
 		27EE83961A729A7100415D9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27EE83941A729A7100415D9B /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		27B9D2601A72A109005BC633 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		27B9D2621A72D55B005BC633 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		27B9D2641A72E67A005BC633 /* DrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingModel.swift; sourceTree = "<group>"; };
+		27B9D2661A72ED06005BC633 /* ScratchPad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ScratchPad.playground; sourceTree = "<group>"; };
 		27EE838B1A729A7100415D9B /* FingerPaintSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerPaintSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27EE838F1A729A7100415D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27EE83901A729A7100415D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +88,10 @@
 			children = (
 				27EE83901A729A7100415D9B /* AppDelegate.swift */,
 				27EE83921A729A7100415D9B /* ViewController.swift */,
+				27B9D2661A72ED06005BC633 /* ScratchPad.playground */,
 				27EE83941A729A7100415D9B /* Main.storyboard */,
 				27B9D2621A72D55B005BC633 /* DrawingView.swift */,
+				27B9D2641A72E67A005BC633 /* DrawingModel.swift */,
 				27EE83971A729A7100415D9B /* Images.xcassets */,
 				27EE83991A729A7100415D9B /* LaunchScreen.xib */,
 				27EE838E1A729A7100415D9B /* Supporting Files */,
@@ -221,6 +226,7 @@
 			files = (
 				27B9D2631A72D55B005BC633 /* DrawingView.swift in Sources */,
 				27EE83931A729A7100415D9B /* ViewController.swift in Sources */,
+				27B9D2651A72E67A005BC633 /* DrawingModel.swift in Sources */,
 				27EE83911A729A7100415D9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
